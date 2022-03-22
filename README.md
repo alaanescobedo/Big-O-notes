@@ -1,0 +1,7 @@
+## #Rules
+We can follow some rules to determine in a simple way the time of complexity of the operations:
+
+- **Simplify and remove the constants** → When we have multiple constants that belong to a singe BigO family (`O(3n)`), no matter how much we increase the size of the input, we are going to fin that the time cost of complexity remains **linear**, so we can reduce and simplify the term to `O(n)`. The same concept applies to the other notations.
+- **Use worst-case cost of complexity** → It does not matter if our operation sometimes gives us results of `O(1)`, if it presents higher operation costs, we must calculate the notation based on it.
+- **Multiple inputs == multiple names** → We assign a name to our input (commonly `n`), when we present multiple inputs (`input1`, `input2`), we must assign a different name to each one (`input1` is `n`, `input2` is `m`) and we could say that our notation is `O(2n+m)`.
+- **Drop Non Dominants** → In our algorithms we can find diversity of operations, multiple consecutive loops `O(2n),` nested loops `O(n^2)`, no loops `O(1)` loops, etc. In order to calculate our BigO more easily, we must focus on the operation that has the highest cost in relation to scalability. If we present the following calculation with `O(2n + n^2 + 100)`, we can find that as our input increases, the cost of `(n^2)` is greater, therefore we can say that the BigO is of `O(n^2)`.
